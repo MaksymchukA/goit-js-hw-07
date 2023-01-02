@@ -50,8 +50,19 @@ function onClick(evt) {
 `);
 
 instance.show()
-};
 
 // Закриття з клавіатури
 
+window.addEventListener('keydown', onEscapeKeyPress);
 
+function onEscapeKeyPress(event) {
+    // console.log(event.key);
+    // console.log(event.code);
+
+    const isEscapeKey = event.code === 'Escape';
+
+    if (isEscapeKey) {
+        instance.close()
+    }
+}
+};
